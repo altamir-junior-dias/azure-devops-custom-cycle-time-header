@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://azurewebhooks.somee.com/cdn/v1.0/initialization/libraries.js"></script>
+    <script src="https://azurewebhooks.somee.com/cdn/v1.0/initialization/configuration.js" data-widget-id="CustomCycleTimeHeaderConfiguration" data-widget-uri="configuration"></script>
+
+    <style>
+        .margin-bottom { 
+            margin-bottom: 10px;
+        }
+
+        .widget-configuration input[type=number], .widget-configuration select {
+            width: 100%;
+            height: 32px;
+            padding: 3px 5px;
+            position: relative;
+            border: 1px solid;
+            border-color: rgba( 234, 234, 234 , 1 );
+            border-color: rgba( var(--palette-neutral-8,234, 234, 234) , 1 );
+        }
+    </style>
+</head>
+<body>
+    <div class="widget-configuration">
+        <div class="single-line-text-input margin-bottom">
+            <label>Title</label>
+            <input id="title" type="text"></input>
+        </div>
+
+        <div class="single-line-text-input margin-bottom">
+            <label>Message</label>
+            <input id="message" type="text"></input>
+        </div>
+
+        <div class="dropdown margin-bottom">
+            <label>Source</label>
+            <div class="wrapper">
+                <select id="source">
+                    <option value="backlog">Backlog</option>
+                    <option value="query">Query</option>
+                </select>
+            </div>
+        </div>
+        
+        <div class="dropdown margin-bottom" id="team-area">
+            <label>Team</label>
+            <div class="wrapper">
+                <select id="team">
+                </select>
+            </div>
+        </div>
+
+        <div class="dropdown margin-bottom" id="backlog-area">
+            <label>Backlog</label>
+            <div class="wrapper">
+                <select id="backlog">
+                </select>
+            </div>
+        </div>
+
+        <div class="dropdown margin-bottom" id="query-area">
+            <label>Query</label>
+            <div class="wrapper">
+                <select id="query">
+                </select>
+            </div>
+        </div>
+        
+        <div class="single-line-text-input margin-bottom" id="days-behind-area">
+            <label>Days behind today</label>
+            <input id="days-behind" type="number"></input>
+        </div>
+
+        <div class="dropdown margin-bottom">
+            <label>Start Field</label>
+            <div class="wrapper">
+                <select id="start-field">
+                </select>
+            </div>
+        </div>
+
+        <div class="dropdown margin-bottom">
+            <label>Finish Field</label>
+            <div class="wrapper">
+                <select id="finish-field">
+                </select>
+            </div>
+        </div>
+
+        <div class="single-line-text-input">
+            <label>Decimal places</label>
+            <input id="decimal-places" type="number"></input>
+        </div>
+    </div>
+</body>
+</html>

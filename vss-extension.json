@@ -1,0 +1,71 @@
+{
+    "manifestVersion": 1,
+    "id": "CustomCycleTimeHeaderExtension",
+    "publisher": "AltamirJuniorDias",
+    "version": "0.0.29",
+    "name": "Custom Cycle Time Header",
+    "description": "Custom Cycle Time Header",
+    "public": false,
+    "icons": {
+        "default": "images/icon.png"
+    },
+    "categories": ["Azure Boards"],
+    "repository": {
+        "type": "git",
+        "uri": "https://github.com/altamir-junior-dias/azure-devops-extension-custom-cycle-time-header"
+      },
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],
+    "content": {
+        "details": {
+            "path": "overview.md"
+        }
+    },
+    "contributions": [
+        {
+            "id": "CustomCycleTimeHeader",
+            "type": "ms.vss-dashboards-web.widget",
+            "targets": [
+                "ms.vss-dashboards-web.widget-catalog",
+                ".CustomCycleTimeHeaderConfiguration"
+            ],
+            "properties": {
+                "name": "Custom Cycle Time Header",
+                "description": "Custom Cycle Time Header",
+                "catalogIconUrl": "images/icon.png",
+                "previewImageUrl": "images/icon.png",
+                "uri": "widget.html",
+                "supportedSizes": [
+                    {
+                        "rowSpan": 1,
+                        "columnSpan": 1
+                    }
+                ],
+                "supportedScopes": [
+                    "project_team"
+                ]
+            }
+        },
+        {
+            "id": "CustomCycleTimeHeaderConfiguration",
+            "type": "ms.vss-dashboards-web.widget-configuration",
+            "targets": [ "ms.vss-dashboards-web.widget-configuration" ],
+            "properties": {
+                "name": "Custom Cycle Time Header - Configuration",
+                "description": "Custom Cycle Time Header - Configuration",
+                "uri": "configuration.html"
+            }
+        }
+    ],
+
+    "files": [
+        { "path": "dist", "addressable": true, "packagePath": "/" },
+        { "path": "images", "addressable": true, "packagePath": "/images" },
+
+        { "path": "node_modules/vss-web-extension-sdk/lib", "addressable": true, "packagePath": "/lib" }
+    ],
+    "scopes": ["vso.work"]
+}
