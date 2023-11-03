@@ -89,7 +89,8 @@
             finishField: settings?.finishField ?? '',
             team: settings?.team ?? VSS.getWebContext().team.id,
             backlog: settings?.backlog ?? 'Microsoft.TaskCategory',
-            daysBehind: settings?.daysBehind ?? 30
+            daysBehind: settings?.daysBehind ?? 30,
+            decimalPlaces: settings?.decimalPlaces
         };
     };
 
@@ -100,7 +101,7 @@
         $message.text(settings.message);
 
         getData(settings).then(cycleTime => {
-            $counter.text(cycleTime.toFixed(settings.DecimalPlaces));
+            $counter.text(cycleTime.toFixed(settings.decimalPlaces));
         });
     };
 

@@ -2,10 +2,10 @@
     "manifestVersion": 1,
     "id": "CustomCycleTimeHeaderExtension",
     "publisher": "AltamirJuniorDias",
-    "version": "0.0.29",
+    "version": "1.0.2",
     "name": "Custom Cycle Time Header",
     "description": "Custom Cycle Time Header",
-    "public": false,
+    "public": true,
     "icons": {
         "default": "images/icon.png"
     },
